@@ -12,3 +12,5 @@ Usage : ./bypassCloudflare.sh https://www.123456.com
 
 Once this is done, the clearance cookie is stored in a file and can be used in curl requests to behave like a browser.
 
+Note that the headers passed to curl requests (-H) come from browser requests and they might not all be required.
+
