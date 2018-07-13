@@ -10,3 +10,5 @@ Usage : ./bypassCloudflare.sh https://www.123456.com
 3. calculate jschl_answer and extract 2 other parameters
 4. perform a get request on the control url with the 3 parameters and retrieve the clearance cookie in the HTTP response
 
+Once this is done, the clearance cookie is stored in a file and can be used in curl requests to behave like a browser.
+
