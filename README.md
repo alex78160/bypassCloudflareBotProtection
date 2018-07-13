@@ -14,3 +14,6 @@ Once this is done, the clearance cookie is stored in a file and can be used in c
 
 Note that the headers passed to curl requests (-H) come from browser requests and they might not all be required.
 
+I needed this feature (get clearance cookie like a browser) to write a more complicated shell script to authenticate on a torrent web site (curl credentials and store session cookies) and download thousands of files, browsing all the pages in each category (with curl requests and the required cookies).
+It saves me a lot of time : I no longer have to click everywhere, wait, read, download a file and repeat that during hours.
+
