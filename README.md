@@ -3,7 +3,7 @@ a shell script using curl and nodejs to bypass the cloudflare bot protection : r
 
 You must pass the url you want to access as a parameter to the script
 
-Usage : ./bypassCloudflare.sh https://www.123456.com
+Usage : ./bypassCloudflare.sh "https://www.123456.com"
 
 1. get the control page
 2. extract the JavaScript control code
