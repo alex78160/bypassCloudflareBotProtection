@@ -99,7 +99,6 @@ do
     echo "getting clearance cookie..."
 	
 	urlcook=$rootUrl"cdn-cgi/l/chk_jschl"
-	endp="s=$ss&jschl_vc=$v1&pass=$v2&jschl_answer=$v3"
 	params=$urlcook"?s=$ss&jschl_vc=$v1&pass=$v2&jschl_answer=$v3"
 	
 	h1="'authority: $host'"
