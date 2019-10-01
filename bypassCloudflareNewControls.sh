@@ -7,8 +7,6 @@ then
 fi
 # this is the url on which you perform the initial GET request
 rootUrl=$1
-# site
-site=$(echo $rootUrl | awk -F '/' '{print $(NF-1)}')
 # we create a working folder to store files used in this script
 rootFolder="tmp_"$(date +%Y%m%d-%H%M%S)
 # host extracted from rootUrl
@@ -63,7 +61,7 @@ do
 	grep -A 20 "<form id=\"challenge" $controlPage | grep "<div style=\"display:none;visibility:hidden;\"" | awk -F '</div>' '{print $1}' | awk -F '>' '{print $NF}' >> $divcalc
 	echo "console.log(d1);" >> $divcalc
 	rm -rf $finalScript
-	echo "t=\"$site\"" > $finalScript
+	echo "t=\"$host\"" > $finalScript
     
     i=0
     while read line
@@ -104,7 +102,7 @@ do
 	endp="s=$ss&jschl_vc=$v1&pass=$v2&jschl_answer=$v3"
 	params=$urlcook"?s=$ss&jschl_vc=$v1&pass=$v2&jschl_answer=$v3"
 	
-	h1="'authority: $site'"
+	h1="'authority: $host'"
 	h2="'upgrade-insecure-requests: 1'"
 	h3="'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36 OPR/63.0.3368.94'"
 	h4="'sec-fetch-mode: navigate'"
